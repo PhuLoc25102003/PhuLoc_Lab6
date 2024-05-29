@@ -6,6 +6,6 @@ public interface RequestProduct {
 
     public void setPriority(Request request);
 
-    public void processRequest(Request request);
+    public Request processRequest(Request request);
 
 }

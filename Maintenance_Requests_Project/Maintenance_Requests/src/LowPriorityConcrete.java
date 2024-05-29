@@ -1,28 +1,30 @@
 public class LowPriorityConcrete implements RequestProduct {
-    private String priority;
-    private String expireDay;
-    private String status;
-
+    
     @Override
-    public void processRequest() {
+    public Request processRequest(Request request) {
+        setExpire(request);
+        setStatus(request);
+        setPriority(request);
         System.out.println("Request Denied");
+
+        return  request;
     }
 
     @Override
-    public void setExpire() {
-        this.expireDay = "28/05/2024";
+    public void setExpire(Request request) {
+        request.setExpireDay("28/05/2024");
         
     }
 
     @Override
-    public void setPriority() {
-        this.priority = "Ignore";
-        
+    public void setPriority(Request request) {
+        request.setPriority("Ignore");
+
     }
 
     @Override
-    public void setStatus() {
-       this.status = "Done";
+    public void setStatus(Request request) {
+       request.setStatus("Done"); 
         
     }
 

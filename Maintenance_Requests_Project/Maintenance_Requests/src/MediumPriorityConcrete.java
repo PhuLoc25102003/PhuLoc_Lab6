@@ -2,9 +2,13 @@ public class MediumPriorityConcrete implements RequestProduct{
 
 
     @Override
-    public void processRequest(Request request) {
-        request.setProcessRequest("Request accept, estimated completion date is 28/5/2024");
-        
+    public Request processRequest(Request request) {
+        setExpire(request);
+        setPriority(request);
+        setStatus(request);
+        System.out.println("Request accept, estimated completion date is 28/06/2024");
+
+        return request;
     }
 
     @Override
@@ -13,15 +17,15 @@ public class MediumPriorityConcrete implements RequestProduct{
     }
 
     @Override
-    public void setPriority() {
-        this.priority = "Medium";
+    public void setPriority(Request request) {
+        request.setPriority("Medium");
         
         
     }
 
     @Override
-    public void setStatus() {
-        this.status = "Accepted";
+    public void setStatus(Request request) {
+        request.setStatus("Accepted");
         
     }
 

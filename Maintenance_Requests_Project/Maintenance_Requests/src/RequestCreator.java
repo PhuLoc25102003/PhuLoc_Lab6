@@ -1,3 +1,3 @@
-public class RequestCreator {
-
+public interface RequestCreator {
+    public Request createRequest();
 }

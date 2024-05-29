@@ -2,6 +2,10 @@ public class Request {
     private String priority;
     private String expireDay;
     private String status;
+    
+    public Request() {
+    }
+
     public String getPriority() {
         return priority;
     }
@@ -20,18 +24,8 @@ public class Request {
     public void setStatus(String status) {
         this.status = status;
     }
-    public Request(String priority, String expireDay, String status) {
-        this.priority = priority;
-        this.expireDay = expireDay;
-        this.status = status;
-    }
+  
 
-    @Override
-    public String toString(){
-        return this.status + "  " + this.expireDay + " " + this.priority + " ";
-    }
-
-    
     
 
 }
